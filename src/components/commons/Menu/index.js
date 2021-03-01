@@ -1,8 +1,8 @@
-import React from 'react'
-import { MenuWrapper } from './styles/MenuWrapper'
-import { Logo } from '../../../theme/Logo'
-import { Button } from '../Button'
-import Text from '../../foundation/Text'
+import React from 'react';
+import { MenuWrapper } from './styles/MenuWrapper';
+import { Logo } from '../../../theme/Logo';
+import { Button } from '../Button';
+import Text from '../../foundation/Text';
 
 function Menu() {
   const links = [
@@ -18,17 +18,17 @@ function Menu() {
       texto: 'Sobre',
       url: '/sobre',
     },
-  ]
+  ];
   return (
     <MenuWrapper>
       <MenuWrapper.LeftSide>
         <Logo />
       </MenuWrapper.LeftSide>
       <MenuWrapper.CentralSide>
-        {links.map(link => (
+        {links.map((link) => (
           <li key={link.url}>
             <Text variant="smallestException" tag="a" href={link.url}>
-              {link.texto}{' '}
+              {link.texto}
             </Text>
           </li>
         ))}
@@ -40,6 +40,6 @@ function Menu() {
         <Button variant="primary.main">Cadastrar</Button>
       </MenuWrapper.RightSide>
     </MenuWrapper>
-  )
+  );
 }
-export default Menu
+export default Menu;

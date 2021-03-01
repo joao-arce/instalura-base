@@ -1,5 +1,7 @@
-function PageSobre(props) {
-  return <div>Página Sobre !!</div>
+import React from 'react';
+
+function PageSobre() {
+  return <div>Página Sobre !!</div>;
 }
 
-export default PageSobre
+export default PageSobre;

@@ -1,5 +1,7 @@
-import styled, { css } from 'styled-components'
-import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia'
+/* eslint-disable indent */
+import styled, { css } from 'styled-components';
+import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
+import { propToStyle } from '../../../../theme/utils/propToStyle';
 
 const Container = styled.div`
   width: 100%;
@@ -25,8 +27,11 @@ const Container = styled.div`
       max-width: 1222px;
     `,
   })}
-`
 
+  ${propToStyle('marginTop')}
+`;
+
+// eslint-disable-next-line import/prefer-default-export
 export const Grid = {
   Container,
   Row: styled.div`
@@ -49,7 +54,7 @@ export const Grid = {
           flex-shrink: 0;
           flex-basis: ${(100 * value) / 12}%;
           max-width: ${(100 * value) / 12}%;
-        `
+        `;
       }
 
       return breakpointsMedia({
@@ -93,14 +98,14 @@ export const Grid = {
               max-width: ${(100 * value.xl) / 12}%;
             `
           : '',
-      })
+      });
     }}
 
     ${function ({ offset }) {
       if (typeof offset === 'number') {
         return css`
           margin-left: ${(100 * offset) / 12} %;
-        `
+        `;
       }
 
       return breakpointsMedia({
@@ -129,7 +134,12 @@ export const Grid = {
               margin-left: ${(100 * offset.lx) / 12}%;
             `
           : '',
-      })
+      });
     }}
+
+    ${propToStyle('display')}
+    ${propToStyle('alignItems')}
+    ${propToStyle('justifyContent')}
+    ${propToStyle('flexDirection')}
   `,
-}
+};

@@ -1,7 +1,9 @@
-import styled, { css } from 'styled-components'
-import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia'
-import { TextStyledVariantsMap } from '../../../foundation/Text'
+/* eslint-disable indent */
+import styled, { css } from 'styled-components';
+import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
+import { TextStyledVariantsMap } from '../../../foundation/Text';
 
+// eslint-disable-next-line import/prefer-default-export
 export const MenuWrapper = styled.nav`
   font-family: 'Rubik', sans-serif;
   display: flex;
@@ -28,7 +30,7 @@ export const MenuWrapper = styled.nav`
       max-width: 1222px;
     `,
   })}
-`
+`;
 
 MenuWrapper.LeftSide = styled.div`
   padding: 0;
@@ -46,7 +48,7 @@ MenuWrapper.LeftSide = styled.div`
       padding-right: 16px;
     `,
   })}
-`
+`;
 
 MenuWrapper.CentralSide = styled.div`
   padding: 0;
@@ -81,6 +83,7 @@ MenuWrapper.CentralSide = styled.div`
     color: #88989e;
     transition: 200ms ease-in-out;
     ${breakpointsMedia({
+      // eslint-disable-next-line indent
       xs: css`
         ${TextStyledVariantsMap.smallestException}
       `,
@@ -94,7 +97,7 @@ MenuWrapper.CentralSide = styled.div`
       color: #070c0e;
     }
   }
-`
+`;
 
 MenuWrapper.RightSide = styled.div`
   padding: 0;
@@ -108,4 +111,4 @@ MenuWrapper.RightSide = styled.div`
       order: initial;
     `,
   })}
-`
+`;

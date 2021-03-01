@@ -1,13 +1,16 @@
-import { breakpointsMedia } from './breakpointsMedia'
+import { breakpointsMedia } from './breakpointsMedia';
 
+// eslint-disable-next-line import/prefer-default-export
 export function propToStyle(propName) {
-  return function (props) {
-    const propValue = props[propName]
+  // eslint-disable-next-line func-names
+  // eslint-disable-next-line consistent-return
+  return (props) => {
+    const propValue = props[propName];
 
-    if (typeof propValue === 'string') {
+    if (typeof propValue === 'string' || typeof propValue === 'number') {
       return {
         [propName]: props[propName],
-      }
+      };
     }
 
     if (typeof propValue === 'object') {
@@ -27,7 +30,7 @@ export function propToStyle(propName) {
         xl: {
           [propName]: propValue.xl,
         },
-      })
+      });
     }
-  }
+  };
 }
